@@ -1,10 +1,10 @@
 // Rock, Paper, Scissors Game
 
 function playGame() {
-    // Step 1: Get user input using prompt and capitalize the first letter
+    // Step 1
     let userChoice = prompt("Choose: Rock, Paper, or Scissors?").toLowerCase();
 
-    // Step 2: Check if the user's choice is valid
+    // Step 2
     if (!["rock", "paper", "scissors"].includes(userChoice)) {
         let tryAgain = confirm("Invalid choice. Please choose Rock, Paper, or Scissors.\n\nWanna Try again?");
         if (tryAgain) {
@@ -15,10 +15,10 @@ function playGame() {
 
     userChoice = userChoice.charAt(0).toUpperCase() + userChoice.slice(1);
 
-    // Step 3: Generate computer choice randomly and capitalize the first letter
+    // Step 3
     let computerChoice = ["Rock", "Paper", "Scissors"][Math.floor(Math.random() * 3)];
 
-    // Step 4: Determine the game result
+    // Step 4
     let result;
 
     if (userChoice === computerChoice) {
@@ -33,7 +33,7 @@ function playGame() {
         result = "You lose!";
     }
 
-    // Step 5: Display the result using alert
+    // Step 5, 6, 7
     let playAgain = confirm(
         "Your Choice: " +
         userChoice +
@@ -44,7 +44,6 @@ function playGame() {
         "\n\nWanna try again?"
     );
 
-    // Step 6: If the user wants to play again, call the function recursively
     if (playAgain) {
         playGame();
     }
@@ -71,13 +70,13 @@ playGame();
 
 3). Ubah Format Pilihan User:
 
-- Huruf pertama dari pilihan User diubah menjadi huruf besar untuk konsistensi dalam penampilan output.
+- Huruf pertama dari pilihan User diubah menjadi huruf besar supaya sederajat dalam penampilan output.
 
 
 4). Pilih Pilihan Computer:
 
 - Script secara acak memilih pilihan Computer dari antara Batu, Gunting, atau Kertas.
-- Huruf pertama dari pilihan Computer diubah menjadi huruf besar untuk konsistensi.
+- Huruf pertama dari pilihan Computer diubah menjadi huruf besar supaya sederajat dalam outputnya.
 
 
 5). Tentukan Hasil Permainan:
